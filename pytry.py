@@ -2,39 +2,38 @@
 __author__ = 'Paultimate'
 
 from weapon import *
+from loltxt import *
 
 
 class Main():
 
-    def lolstuff(self):
+    def weaponDamage(self):
 
         #print 15 * 2.22
 
-        Sword = Weapon("Sword", 5, 55, 1.55, 2.1)
+        wep = Weapon("Sword", 5, 55, 1.55, 2.1)
+        s = sayThings()
+
+        greet = s.Say()
+
+        self.crit = wep.getDamageCrtRND()
+        self.scrit = wep.getDamageSCrtRND()
+        self.avg = wep.getDamageAvg()
+        self.high = wep.getDamageHigh()
+        self.low = wep.getDamageLow()
+        self.mod = wep.getDamageMod()
+        self.norm = wep.getDamageNrmRND()
+        self.name = wep.getWeaponName()
 
 
-        crit = Sword.getDamageCrtRND()
-        scrit = Sword.getDamageSCrtRND()
-        avg = Sword.getDamageAvg()
-        high = Sword.getDamageHigh()
-        low = Sword.getDamageLow()
-        mod = Sword.getDamageMod()
-        norm = Sword.getDamageNrmRND()
-        name = Sword.getWeaponName()
 
-        # print "Name: " + name
-        # print "-----------"
-        # print "High: " + str(high)
-        # print "Low : " + str(low)
-        # print "Avg : " + str(avg)
-        # print "Crit: " + str(crit)
-
+        print greet
         print "-----------"
-        print "Name: " + name
+        print "Name: " + self.name
         print "-----------"
-        print "High: %s" % high
-        print "Low : %s" % low
-        print "Avg : %s" % avg
-        print "Crit: %s" % crit
+        print "High: %s" % self.high
+        print "Low : %s" % self.low
+        print "Avg : %s" % self.avg
+        print "Crit: %s" % self.crit
         print "--------------------"
-        print "Rounded Num: %s" % Sword.getRound(11.11311, 4)
+        print "Rounded Num: %s" % wep.getRound(11.11311, 4)
