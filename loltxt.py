@@ -25,6 +25,3 @@ class sayThings():
 
     def listValues(self):
         return self.script.values()
-
-        #s = sayThings()
-        #print s.listKeys2()

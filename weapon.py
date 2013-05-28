@@ -1,9 +1,11 @@
 __author__ = 'Paultimate'
 
 from rng import *
+from weapondb import *
 
 
 class Weapon():
+
     def __init__(self, name="Stick", high=1, low=0, critMod=1, scritMod=2):
         self.rng = randNum()
         self.name = name
