@@ -1,39 +1,40 @@
-
 __author__ = 'Paultimate'
 
 from weapon import *
 from loltxt import *
+from weapondb import *
 
 
 class Main():
+	def weaponDamage(self):
+		#print 15 * 2.22
 
-    def weaponDamage(self):
+		wdb = WeaponDB()
+		wepstats = wdb.getWeaponStats('Sword')
+		wep = Weapon(*wepstats)
+		#wep2 = Weapon("Sword", 5, 55, 1.55, 2.1)
 
-        #print 15 * 2.22
+		print wep
+		#print wep2
 
-        wep = Weapon("Sword", 5, 55, 1.55, 2.1)
-        s = sayThings()
+		s = sayThings()
 
-        greet = s.Say()
+		greet = s.Say()
 
-        self.crit = wep.getDamageCrtRND()
-        self.scrit = wep.getDamageSCrtRND()
-        self.avg = wep.getDamageAvg()
-        self.high = wep.getDamageHigh()
-        self.low = wep.getDamageLow()
-        self.mod = wep.getDamageMod()
-        self.norm = wep.getDamageNrmRND()
-        self.name = wep.getWeaponName()
+		self.crit = wep.getDamageCrtRND()
+		self.scrit = wep.getDamageSCrtRND()
+		self.avg = wep.getDamageAvg()
+		self.norm = wep.getDamageNrmRND()
 
+		print greet
+		print "-----------"
+		print "Name: " + wep.name
+		print "-----------"
+		print "High: %s" % wep.high
+		print "Low : %s" % wep.low
+		print "Avg : %s" % self.avg
+		print "Crit: %s" % self.crit
+		print "--------------------"
+		print "Rounded Num: %s" % wep.getRound(11.11311, 4)
 
-
-        print greet
-        print "-----------"
-        print "Name: " + self.name
-        print "-----------"
-        print "High: %s" % self.high
-        print "Low : %s" % self.low
-        print "Avg : %s" % self.avg
-        print "Crit: %s" % self.crit
-        print "--------------------"
-        print "Rounded Num: %s" % wep.getRound(11.11311, 4)
+		# TODO Make dict of arrays to store weapon and armor info
