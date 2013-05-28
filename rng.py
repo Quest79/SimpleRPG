@@ -4,5 +4,5 @@ from random import randint
 
 
 class randNum():
-	def getRandNum(self, low, high):
-		return randint(low, high)
+    def getRandNum(self, low, high):
+        return randint(low, high)
