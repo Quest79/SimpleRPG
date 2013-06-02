@@ -29,6 +29,8 @@ class hero():
         h.setHeroDict("Welcome", "Name")
         h.setHeroDict("AskClass", "Class")
         h.setHeroDict("AskWeapon", "Weapon")
+
+
 #
 # print h.herodict["Name"]
 # print h.herodict["Class"]

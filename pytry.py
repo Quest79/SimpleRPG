@@ -73,6 +73,7 @@ class Main():
             print "OMG MAGE"
         else:
             print "Error :( "
+
         # h = hero()
         # h.setHeroName()
         # h.setHeroClass()
