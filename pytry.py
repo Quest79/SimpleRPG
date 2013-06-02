@@ -16,7 +16,7 @@ class Main():
         self.screen = pygame.display.set_mode((self.width, self.height), 0, 32)
         self.place = "catr.jpg"
         self.running = running
-        pygame.init()
+        #pygame.init()
 
     def fib(self, n):
         x = 0
@@ -61,12 +61,18 @@ class Main():
         return self.wep
 
     def weaponDamage(self):
-        pass
         # hname = raw_input("Greetings, hero. What is thine name? ")
         # hclss = raw_input("Welcome %s. What is thine class? " % hname)
         # woots = raw_input("Do tell hero %s, whome with teachings of the %s; what shalt your weapon be? " % (hname, hclss))
 
 
+        h = hero()
+        h.heroMake()
+
+        if h.herodict["Class"] == "Mage":
+            print "OMG MAGE"
+        else:
+            print "Error :( "
         # h = hero()
         # h.setHeroName()
         # h.setHeroClass()

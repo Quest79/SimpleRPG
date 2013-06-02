@@ -4,4 +4,5 @@ from pytry import Main
 
 
 run = Main()
-run.start()
+run.weaponDamage()
+
