@@ -1,7 +1,7 @@
 __author__ = 'Paultimate'
 
 
-class hero():
+class Hero():
 
     def __init__(self, name="Jimmy", prof="Warrior", weapon="Sword"):
         """Constructor for hero"""
@@ -19,19 +19,21 @@ class hero():
             "AskWeapon": "A {Class}, hmm? What shalt thy weapon be? ",
         }
 
-    def setHeroDict(self, textkey, herokey):
+    def setHeroDicts(self, textkey, herokey):
         n = raw_input(self.herotext[textkey].format(**self.herodict))
+
+        if n == "":
+            n = self.herodict[herokey]
+
         self.herodict[herokey] = n
-        print self.herodict[herokey]
+        #print self.herodict[herokey]
 
     def heroMake(self):
-        h = hero("Tommy", "Mage", "Staff")
-        h.setHeroDict("Welcome", "Name")
-        h.setHeroDict("AskClass", "Class")
-        h.setHeroDict("AskWeapon", "Weapon")
+        self.setHeroDicts("Welcome", "Name")
+        self.setHeroDicts("AskClass", "Class")
+        self.setHeroDicts("AskWeapon", "Weapon")
 
 
-#
 # print h.herodict["Name"]
 # print h.herodict["Class"]
 # print h.herodict["Weapon"]

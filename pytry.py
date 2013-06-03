@@ -66,13 +66,18 @@ class Main():
         # woots = raw_input("Do tell hero %s, whome with teachings of the %s; what shalt your weapon be? " % (hname, hclss))
 
 
-        h = hero()
+        h = Hero()
+        print h.prof
         h.heroMake()
+        print h.prof
+        print h.herodict["Class"]
 
-        if h.herodict["Class"] == "Mage":
+        if "Mage" in h.herodict["Class"]:
             print "OMG MAGE"
+        elif "Warrior" in h.herodict["Class"]:
+            print "Warrior!"
         else:
-            print "Error :( "
+            print "NONE"
 
         # h = hero()
         # h.setHeroName()
