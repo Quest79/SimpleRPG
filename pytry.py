@@ -22,7 +22,7 @@ class Main():
         x = 0
         for i in range(n+1):
             x += i
-            print x
+            print(x)
 
     def start(self):
         self.screen.blit(self.img.renderImg(self.place), (0, 0))
@@ -38,11 +38,11 @@ class Main():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
-                    print 'Quitting...'
+                    print('Quitting...')
                     pygame.quit()
                     sys.exit()
                 else:
-                    print event
+                    print(event)
             if rad > 30:
                 rad = 1
             else:
@@ -67,17 +67,17 @@ class Main():
 
 
         h = Hero()
-        print h.prof
+        print(h.prof)
         h.heroMake()
-        print h.prof
-        print h.herodict["Class"]
+        print(h.prof)
+        print(h.herodict["Class"])
 
         if "Mage" in h.herodict["Class"]:
-            print "OMG MAGE"
+            print("OMG MAGE")
         elif "Warrior" in h.herodict["Class"]:
-            print "Warrior!"
+            print("Warrior!")
         else:
-            print "NONE"
+            print("NONE")
 
         # h = hero()
         # h.setHeroName()

@@ -20,7 +20,7 @@ class WeaponDB():
 
     def getItemList(self):
         for key in self.wepdb:
-            print self.wepdb[key]
+            print(self.wepdb[key])
 
 
 #m = WeaponDB()

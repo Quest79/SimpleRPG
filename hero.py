@@ -20,7 +20,7 @@ class Hero():
         }
 
     def setHeroDicts(self, textkey, herokey):
-        n = raw_input(self.herotext[textkey].format(**self.herodict))
+        n = input(self.herotext[textkey].format(**self.herodict))
 
         if n == "":
             n = self.herodict[herokey]
