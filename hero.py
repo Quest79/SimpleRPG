@@ -26,7 +26,7 @@ class Hero():
             n = self.herodict[herokey]
 
         self.herodict[herokey] = n
-        #print self.herodict[herokey]
+        # print self.herodict[herokey]
 
     def heroMake(self):
         self.setHeroDicts("Welcome", "Name")
